@@ -20,9 +20,9 @@ var Domhead = React.createClass({
     
 })
 
-var Head = function(){
+var head = function(){
     return React.createElement(Domhead);    
 }
 module.exports = {
-    head: Head
+    head: head
 }
