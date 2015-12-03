@@ -8,13 +8,11 @@ var head = require('./modules/head').head();
 var title = require('./modules/body').title();
 
 
-//var header = head.head();
-//var title = body.title();
 var document = React.createElement('html',{key: 'html'}, [head, title])
-
 var home = function *(next){
      this.body = ReactDOMServer.renderToString(document)    
 }
+
 
 router.get('/', home);
 
