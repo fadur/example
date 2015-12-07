@@ -21,7 +21,7 @@ var Domhead = React.createClass({
 })
 
 var head = function(){
-    return React.createElement(Domhead);    
+    return React.createElement(Domhead, {});    
 }
 module.exports = {
     head: head

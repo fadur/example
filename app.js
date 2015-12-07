@@ -1,4 +1,5 @@
 var koa = require('koa');
+var http = require('http'); 
 var router = require('koa-router')();
 var app = koa();
 var React = require('react');
@@ -18,4 +19,5 @@ router.get('/', home);
 
 app.use(router.routes());
 app.use(router.allowedMethods());
-app.listen(3000);
+http.createServer(app.callback()).listen(3000);
+http.createServer(app.callback()).listen(3001);
